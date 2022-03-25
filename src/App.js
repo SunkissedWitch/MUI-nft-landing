@@ -3,9 +3,9 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Header from './Layout/Header';
+import Main from './Layout/Main';
+import Footer from './Layout/Footer';
 import theme from './theme';
 import { Container, Typography } from '@mui/material';
 

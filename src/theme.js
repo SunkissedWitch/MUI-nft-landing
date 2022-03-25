@@ -39,7 +39,12 @@ const theme = createTheme({
     htmlFontSize: 20,
     button: {
       textTransform: 'none',
-    }
+    },
+    h3: {
+      fontSize: '1.5rem',
+      fontWeight: 600,
+      color: 'black',
+    },
   },
 
   components: {

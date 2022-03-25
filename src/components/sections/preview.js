@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from '@mui/material/styles';
 import bg from '../../images/bg.png';
 import primeArt from '../../images/primeArt.png';
-import { MyButton } from '../MyButton';
+import { MyButton } from '../custom-components/MyButton';
 
 import { 
 	Typography, 

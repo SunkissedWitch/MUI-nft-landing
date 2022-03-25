@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { Container, Typography } from '@mui/material';
-import Preview from './sections/preview'
+import Preview from '../components/sections/preview';
+import Second from '../components/sections/second';
 
 function Main () {
   return (
     <main>
-      <Preview />    
+      <Preview />  
+      <Second />  
     </main>
   )
 }

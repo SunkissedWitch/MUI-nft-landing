@@ -1,6 +1,6 @@
 import React from "react";
 import {ReactComponent as Logo} from '../logo.svg';
-import SearchBar from "./Search";
+import SearchBar from "../components/custom-components/Search";
 import MenuIcon from '@mui/icons-material/Menu';
 import { ReactComponent as wallet } from '../Icons/akar-icons_wallet.svg';
 import { ReactComponent as UserIcon } from '../Icons/UserIcon.svg';
