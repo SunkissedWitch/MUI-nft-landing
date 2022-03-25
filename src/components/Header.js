@@ -10,17 +10,17 @@ import {
 	AppBar,
 	Toolbar, 
 	Typography, 
-	Button,
 	IconButton,
 	Box,
 	MenuItem,
 	Menu,
 	Icon,
-	Container
+	Container,
+  Stack,
+  Link
 } from '@mui/material';
 
 const pages = ['Marketplace', 'Stats', 'Resources'];
-
 
 
 const Header = () => {
@@ -47,9 +47,10 @@ const Header = () => {
           >
             <Logo />
           </IconButton>
-          <Box sx={{ flex: 3 }} />
+          <Box sx={{ flex: { xs: 3,  md: 4 } }} />
 
           <SearchBar />
+          <Box sx={ { flex: 1 }} />
 
           <Box
             sx={{
@@ -91,33 +92,51 @@ const Header = () => {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
+              <Stack direction="row" spacing={1}  sx={{ my: 'auto', mx: 2, display: "flex"}}>
+                <IconButton>
+                  <Icon component={UserIcon} fontSize="small" />
+                </IconButton>
+
+                <IconButton>
+                  <Icon component={wallet} fontSize="medium" />
+                </IconButton>
+              </Stack>
             </Menu>
           </Box>
 
           <Box
             sx={{
               display: { xs: "none", md: "flex" },
-              justifyContent: "flex-end",
+              flexWrap: 'wrap',
+              justifyContent: 'flex-end',
+              typography: 'h6',
+              '& > :not(style) + :not(style)': {
+                ml: 2,
+                },
             }}
           >
             {pages.map((page) => (
-              <Button
-                variant="link"
+              <Link
+              component="button"
+              variant="body2"
+              underline="none"
+              
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" }}
-              >
-                {page}
-              </Button>
+                sx={{ my: "auto", color: "black", display: "flex", typography: 'h6' }}
+              > 
+                {page} 
+              </Link>
             ))}
+            <Stack direction="row" spacing={1}  sx={{ my: 'auto', display: "flex" }}>
+              <IconButton>
+                <Icon component={UserIcon} fontSize="small" />
+              </IconButton>
 
-            <IconButton>
-              <Icon component={UserIcon} fontSize="small" />
-            </IconButton>
-
-            <IconButton>
-              <Icon component={wallet} fontSize="medium" />
-            </IconButton>
+              <IconButton>
+                <Icon component={wallet} fontSize="medium" />
+              </IconButton>
+            </Stack>
           </Box>
         </Toolbar>
       </Container>

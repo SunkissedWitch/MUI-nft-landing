@@ -1,12 +1,18 @@
 import { createTheme } from '@mui/material/styles';
+import { grey } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
     primary: {
       main: '#f03030',
+      dark: '#b22121',
+      light: '#ff5959',
+
     },
     secondary: {
       main: '#EB5757',
+      dark: '#a43c3c',
+      light: '#ef7878',
     },
     info: {
       main: '#2081e2',
@@ -20,26 +26,31 @@ const theme = createTheme({
       paper: '#fff',
     },
     text: {
-      primary: '#000000',
-      secondary: '#ff3030',
-      disabled: '#bdbdbd',
-      hint: '#bdbdbd',
+      primary: '#4F4F4F',
+      secondary: grey,
+      disabled: grey.A400,
+      hint: grey.A400,
     },
-    divider: '#bdbdbd',
+    divider: '#E0E0E0',
   },
   typography: {
     fontFamily: 'Poppins',
     fontWeightBold: 600,
+    htmlFontSize: 20,
+    button: {
+      textTransform: 'none',
+    }
   },
+
   components: {
-    // MuiAppBar: {
+    // MuiButton: {
     //   defaultProps: {
-    //     color: 'default',
+    //     border: 8,
     //   },
     // },
     MuiInputBase: {
       defaultProps: {
-        border: "1px",
+        border: 1,
         color: '#BDBDBD',
       },
     },

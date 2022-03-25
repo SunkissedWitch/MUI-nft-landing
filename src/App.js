@@ -1,10 +1,14 @@
+import './App.css';
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 import theme from './theme';
 import { Container, Typography } from '@mui/material';
+
 
 
 function App() {
@@ -13,18 +17,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
         <Header /> 
-        <main>
-          <section>
-            <Container sx={{height: 300}}>
-              <Typography>Here will be content of the page</Typography>
-            </Container>        
-          </section>
-        </main>
-        <footer>
-          <Container>
-            <Typography variant='subtitle2'>Here will be footer</Typography>       
-          </Container>
-        </footer>
+        <Main />
+        <Footer />
     </ThemeProvider>
   </>
 

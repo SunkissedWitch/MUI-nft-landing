@@ -49,7 +49,7 @@ const SearchBar = () => {
 	return(
 		<Search>
       <SearchIconWrapper>
-        <SearchIcon />
+        <SearchIcon fontSize="small" color="neutral"/>
       </SearchIconWrapper>
       <StyledInputBase
         placeholder="Search collections, creators"
